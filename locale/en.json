@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "REA compression switch",
+    "description": "Adds an REA compression tab to the Plugins page with one switch between the full and the compact REA tool set, so both never load at once."
+  }
+}
