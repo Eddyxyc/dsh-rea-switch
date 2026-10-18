@@ -49,11 +49,15 @@ profile 层**（`~/.dsh/profiles/desktop/cordis.patch.yml`），例如：
 ## 安装
 
 ```powershell
-# 用 plugin_manager 工具，而不是手改 package.json
-plugin_manager install_bundle target=E:\项目\rea开关
+# 私库，需要已登录的 gh / git 凭证
+gh repo clone Eddyxyc/dsh-rea-switch
+
+# 用 plugin_manager 工具安装，而不是手改 profile 的 package.json
+plugin_manager install_bundle target=<克隆到的目录>
 ```
 
-安装后 Host 通过 HMR 挂上 `dsh.client` 声明的浏览器模块，Plugins 页会出现「REA 压缩」标签。
+安装后 Host 通过 HMR 挂上 `dsh.client` 声明的浏览器模块，Plugins 页会出现「REA 压缩」标签
+（已安装的本地目录是 `link:` 依赖，改完代码刷新页面即可，无需重装）。
 
 ## 自检
 
